@@ -20,6 +20,7 @@ const cheerio = require('cheerio');
     var json = []
     for(var i = 1; i >= total; i++){
     await page.click("#CategoryProducts > ul > li:nth-child(" + i + ") > a")
+    await page.waitForSelector("#content > div > div._2-I30XS1lA > div._2QCa6wHHPy > fieldset > div._1ziwSSdAv8 > div.CxNYUPvHfB > h3")
     var product_name = $("#content > div > div._2-I30XS1lA > div._2QCa6wHHPy > fieldset > div._1ziwSSdAv8 > div.CxNYUPvHfB > h3").text()
     var price =  $("#content > div > div._2-I30XS1lA > div._2QCa6wHHPy > fieldset > div._1ziwSSdAv8 > div.WrkQhIlUY0 > div > del > span._1LY7DqCnwR").text()
     var sale_price = $("#content > div > div._2-I30XS1lA > div._2QCa6wHHPy > fieldset > div._1ziwSSdAv8 > div.WrkQhIlUY0 > div > strong > span._1LY7DqCnwR").text()
