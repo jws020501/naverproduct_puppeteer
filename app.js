@@ -4,16 +4,13 @@ const cheerio = require('cheerio');
     var isselerID = false
     var id = "jws020501"
     var pw = "a2726650"
-    // 브라우저를 실행한다.
-    // 옵션으로 headless모드를 끌 수 있다.
+
     const browser = await puppeteer.launch({
       headless: false,
-    //   devtools : true
     });
   
-    // 새로운 페이지를 연다.
     const page = await browser.newPage();
-    // 페이지의 크기를 설정한다.
+  
     await page.setViewport({
       width: 1366,
       height: 768
